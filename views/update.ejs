@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body>
+    <center><h1><u><b>Student Records</b></u></h1></center>
+    <table width="500px" align="center" border="2">
+        <tr>
+            <td>Task list</td>
+            <td>Name</td>
+            <td>Course</td>
+            <td>Fees</td>
+        </tr>
+    <%
+        for(r in records)
+        {
+        %>
+        <tr>
+            <td><%=records[r].task%></td>
+            <td><a href="/deletedata?gtask=<%=records[r].task%>">Delete</a></td>
+        </tr>
+    <%
+        }
+    %>
+</table>
+</body>
+</html>
