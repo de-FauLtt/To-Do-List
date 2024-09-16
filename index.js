@@ -34,10 +34,12 @@ app.get("/updatedata",async (req,res)=>{
 });
 app.get("/updateres",async (req,res)=>
     {
+        let ogtask = req.query.ogtask;
         let gtask=req.query.gtask;
         let collection=await getconnect();
-        let r=await collection.updateOne({task:gtask},{$set:{task:gtask}});
+        let r=await collection.updateOne({task:ogtask},{$set:{task:gtask}});
         let records=await collection.find({}).toArray();
+        console.log(records);
         res.render("home",{records});
     });
 app.listen(5000,()=>console.log("Server is running"));

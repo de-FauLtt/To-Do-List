@@ -8,7 +8,8 @@
 <body>
     <h1>Record Update Window</h1>
     <form method="get" action="/updateres">
-        Task <input type="text" name="gtask" value="<%=records[0].task%>"/><br/>
+        Original Task <input type="text" name="ogtask" value="<%=records[0].task%>" readonly/><br/> 
+        New Task <input type="text" name="gtask" placeholder="Add new task"/><br/>
         <input type="submit" value="Update"/>
     </form>
 </body>
