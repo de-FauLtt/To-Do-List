@@ -34,12 +34,9 @@ app.get("/updatedata",async (req,res)=>{
 });
 app.get("/updateres",async (req,res)=>
     {
-        let ontask = req.query.ontask;
         let ogtask = req.query.ogtask;
         let gtask=req.query.gtask;
-        console.log(ontask);
         let collection=await getconnect();
-        // let re=await collection.find({task:})
         let r=await collection.updateOne({task:ogtask},{$set:{task:gtask}});
         let records=await collection.find({}).toArray();
         console.log(records);
