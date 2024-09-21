@@ -1,0 +1,46 @@
+body
+{
+  background:  lavender;
+  background-position: 100% 100%;
+  background-size:contain;
+  background-repeat: no-repeat;
+  
+   
+}
+div{
+    border: 7px solid white;  
+  outline: 10px solid rgb(222, 37, 92);  
+  border-radius: 10px;  
+  font-size: 20px;  
+  font-weight:bolder;  
+  margin: 100px;  
+  padding: 130px;  
+  outline-offset: 1.2em; 
+   
+}
+.btn1{
+    position: relative;
+    margin-bottom: 10px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: rgb(231, 243, 161);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: rgb(205, 207, 58)}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
