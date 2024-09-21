@@ -1,31 +1,21 @@
-<!-- AISE HE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show</title>
+    <title>Update</title>
+    <link rel="stylesheet" href="css/style2.css">
 </head>
 <body>
-    <center><h1><u><b>Student Records</b></u></h1></center>
-    <table width="500px" align="center" border="2">
-        <tr>
-            <td>Task list</td>
-            <td>Name</td>
-            <td>Course</td>
-            <td>Fees</td>
-        </tr>
-    <%
-        for(r in records)
-        {
-        %>
-        <tr>
-            <td><%=records[r].task%></td>
-            <td><a href="/deletedata?gtask=<%=records[r].task%>">Delete</a></td>
-        </tr>
-    <%
-        }
-    %>
-</table>
+    <h1 style="text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Record Update Window</h1>
+    <div>
+        <form method="post" action="/updateres">
+           <p>Original Task <input class="box1" style="background-color:beige;" type="text" name="ogtask" value="<%=records[0].task%>" readonly/><br/> </p> 
+           
+            New Task <input class="box2" style="background-color:beige" type="text" name="gtask" placeholder="Add new task" required/><br/>
+            <br>
+            <input class="updt" type="submit" value="Update"/>
+        </form>
+    </div>
 </body>
 </html>
